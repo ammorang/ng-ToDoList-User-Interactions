@@ -1,0 +1,103 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  background: linear-gradient(to right, #f857a6, #ff5858);
+}
+
+.container {
+  background-color: white;
+  height: auto;
+  width: 400px;
+  Box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  border-radius: 5px;
+  padding: 5px;
+  margin: 0 auto;
+}
+
+.title, .tagline {
+  padding-left: 15px;
+}
+
+.tagline {
+  margin-top: 0;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.tasklist {
+  width: 360px;
+  margin: 0 auto;
+}
+
+.material-icons {
+  position: absolute;
+  right: 0;
+}
+
+p {
+  padding-left: 15px;
+}
+
+.listwrap {
+  position: relative;
+}
+
+div {
+  padding-left: 0;
+}
+
+.addbtn {
+  background-color: #ff1493;
+  width: 370px;
+  padding: 15px;
+  border-radius: 7px;
+  color: white;
+  font-size: 16px;
+  margin-bottom: 15px;
+  margin-top: 7px;
+}
+
+.completebtn {
+  border-color: #ff1493;
+  border-width: 1px;
+  border-radius: 7px;
+  padding: 5px;
+  color: #ff1493;
+  margin-right: 15px;
+}
+
+.additem, .filteritem {
+  padding: 10px;
+  border-radius: 7px;
+  border: 2px solid #bbb;
+  font-size: 14px;
+  border-width: 1px;
+  width: 347px;
+}
+
+.additem {
+  margin-bottom: 10px;
+}
+
+::placeholder {
+  color: #bbb;
+  font-weight: 800px;
+}
+
+
+.bottom, .top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 400px;
+  margin: 15px;
+}
+
+.true {
+  text-decoration: line-through;
+}
+

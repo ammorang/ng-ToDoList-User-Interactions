@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="toDoApp" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <title>TODO App</title>
+</head>
+<body>
+    <section class="container" ng-controller="TodoController as tasks">
+      <form ng-submit="tasks.addTask()">
+        <p class="title">TODO List</p>
+        <p class="tagline">A place to store the things you have to do!</p>
+        
+        <div class="top">
+        <input type="text" placeholder="Filter your to-dos" class="filteritem" ng-model="searchText">
+        </div>
+
+        <div class="tasklist" ng-repeat="stuff in tasks.toDoTasks | filter:searchText">
+            <section class="listwrap" ng-class="{ 'true': stuff.completed === true, 'false': stuff.completed === false }">
+            <p>{{ $index + 1 }}. <button type="button" class="completebtn" ng-if="stuff.completed === false" ng-click="tasks.completeTask($index, task)">Complete</button>{{ stuff.task }}<i class="material-icons" ng-click="tasks.removeTask($index, stuff)">clear</i></p>
+            </section>
+        </div>
+    
+    <div class="bottom">
+    <input type="text" placeholder="Add your to do" class="additem" ng-model="tasks.newTask.name">
+    <button class="addbtn">Add</button>
+    </div>
+    </form>
+  </section>
+    <script src="https://code.angularjs.org/1.6.5/angular.min.js"></script>
+    <script src="module.js"></script>
+    <script src="controller.js"></script>
+</body>
+</html>
