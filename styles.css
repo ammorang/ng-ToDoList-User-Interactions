@@ -50,12 +50,17 @@ div {
   padding-left: 0;
 }
 
+i {
+    cursor: pointer;
+}
+
 .addbtn {
   background-color: #ff1493;
   width: 370px;
   padding: 15px;
   border-radius: 7px;
   color: white;
+  cursor: pointer;
   font-size: 16px;
   margin-bottom: 15px;
   margin-top: 7px;
